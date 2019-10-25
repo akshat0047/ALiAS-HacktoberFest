@@ -5,7 +5,7 @@ int main()
 int i,j,sum1=0,sum2=0,l;
 int x[3][3]={{1,2,3},
 {4,5,6},
-{7,8,9}
+{17,8,9}
 };
 for(i=0;i<3;i++)
 {
@@ -29,6 +29,6 @@ if(l<0)
 {
     l=l*(-1);
 }
-printf("%d",l);
+printf("difference between the diagonal is %d",l);
 getch();
 }
