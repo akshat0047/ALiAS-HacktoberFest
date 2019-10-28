@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int a[5];
+    int i,sum=0,x=0,h=1,temp=0,max=0,min=60000;
+    printf("Enter the required array: \n");
+    for(i=0;i<5;i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    for (i=0;i<5;i++)
+    { 
+        x=i;
+        while (h<=4)
+        {
+            if (x>4)
+           {
+               x=0;
+           }
+           sum=sum+a[x];
+           x++;
+           h++;
+        }
+        h=1;
+        if (sum>max)
+        {
+            max=sum;
+        }
+        if (sum<min)
+        {
+            min=sum;
+        }
+        sum=0;
+        
+    }
+    printf("Maximum value of array= %d and Minimum value of array= %d",max,min);
+}
