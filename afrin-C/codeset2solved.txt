@@ -1,0 +1,57 @@
+//Program 1
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+int i,j;
+int n;
+clrscr();
+printf("Enter n");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+for(j=1;j<=(n-i);j++)
+printf(" ");
+for(j=1;j<=i;j++)
+printf("#");
+printf("\n");
+}
+getch();
+}
+
+//Program 2
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+int arr1[3];
+int arr2[3];
+int i;
+int sum1=0,sum2=0;
+clrscr();
+printf("Enter arr1 linewise\n");
+for(i=0;i<3;i++)
+scanf("%d",&arr1[i]);
+printf("Enter arr2 linewise\n");
+for(i=0;i<3;i++)
+scanf("%d",&arr2[i]);
+for(i=0;i<3;i++)
+{
+if(arr1[i]>arr2[i])
+{
+sum1+=1;
+}
+else if(arr1[i]<arr2[i])
+{
+sum2+=1;
+}
+else
+{
+sum1+=0;
+sum2+=0;
+}
+}
+printf("Boy A : %d\n",sum1);
+printf("Boy B : %d",sum2);
+getch();
+}
