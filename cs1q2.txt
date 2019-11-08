@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+int arr[5]={1,2,3,4,5};
+int i,k,j;
+int sum=0;
+int low,high;
+clrscr();
+for(i=0;i<4;i++)
+sum+=arr[i];
+low=sum;
+high=sum;
+for(i=2;i<=5;i++)
+{
+sum=0;
+k=i-1;
+for(j=1;j<=4;j++)
+{
+if(k==5)
+k=0;
+sum+=arr[k];
+k++;
+}
+if(sum<low)
+low=sum;
+if(sum>high)
+high=sum;
+
+
+}
+printf("Low=%d",low);
+printf("High=%d",high);
+getch();
+}
+
+
+
