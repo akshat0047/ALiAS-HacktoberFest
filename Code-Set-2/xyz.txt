@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+int i,a=0,b=0,c;
+int x[]={17,28,30};
+int y[]={99,16,8};
+for(i=0;i<3;i++)
+{
+
+  if(x[i]>y[i])
+{
+    a=a+1;
+}
+else if(x[i]<y[i])
+{
+    b=b+1;
+    }
+else if(x[i]==y[i])
+{
+    c=0;
+}
+}
+printf("%d\n",a);
+printf("%d",b);
+return 0;
+}
