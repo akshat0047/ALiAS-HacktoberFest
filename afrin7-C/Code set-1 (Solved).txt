@@ -1,0 +1,107 @@
+//Program 1
+
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+int arr[10][10];
+int size;
+int i,j;
+int diff;
+int sum1=0,sum2=0;
+clrscr();
+printf("Enter size:");
+scanf("%d",&size);
+for(i=0;i<size;i++)
+{
+printf("Enter elements if row %d linewise",i+1);
+for(j=0;j<size;j++)
+{
+scanf("%d",&arr[i][j]);
+if(i==j)
+sum1+=arr[i][j];
+if((i+j)==(size-1))
+sum2+=arr[i][j];
+}
+}
+diff=sum1-sum2;
+if(diff<0)
+diff=diff*-1;
+printf("%d",diff);
+getch();
+}
+		
+
+		
+
+
+   #include <stdio.h>
+	 #include <conio.h>
+		void main()
+		{
+		int arr[10][10];
+		int size;
+		int i,j;
+		int diff;
+		int sum1=0,sum2=0;
+		clrscr();
+		printf("Enter size:");
+		scanf("%d",&size);
+		for(i=0;i<size;i++)
+		{
+		printf("Enter elements if row %d linewise",i+1);
+		for(j=0;j<size;j++)
+		{
+		scanf("%d",&arr[i][j]);
+		if(i==j)
+		sum1+=arr[i][j];
+		if((i+j)==(size-1))
+		sum2+=arr[i][j];
+		}
+		}
+		diff=sum1-sum2;
+		if(diff<0)
+		diff=diff*-1;
+		printf("%d",diff);
+		getch();
+		}
+		
+
+		
+//Program 2
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+int arr[5]={1,2,3,4,5};
+int i,k,j;
+int sum=0;
+int low,high;
+clrscr();
+for(i=0;i<4;i++)
+sum+=arr[i];
+low=sum;
+high=sum;
+for(i=2;i<=5;i++)
+{
+sum=0;
+k=i-1;
+for(j=1;j<=4;j++)
+{
+if(k==5)
+k=0;
+sum+=arr[k];
+k++;
+}
+if(sum<low)
+low=sum;
+if(sum>high)
+high=sum;
+
+
+}
+printf("Low=%d",low);
+printf("High=%d",high);
+getch();
+}
+
